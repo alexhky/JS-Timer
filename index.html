@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" async></script>
+    <title>Timer</title>
+  </head>
+  <body onload="loadsavedvalues()">
+    <div id="myTopbar" class="topbar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="idkman"></div>
+      <label for="date-picker">Wann soll der Timer ablaufen?</label>
+      <div class="idkman"></div>
+      <br><br>
+      <div>
+        <input type="date" id="date-picker"
+             name="date">
+      </div>
+      <div>
+        <input type="time" id="time-picker" name="time">
+      </div>
+      <div>
+        <input type="button" value="OK" id="time-button-pressed" name="time-button" onclick="closeNav()">
+        <input type="button" value="Reset" id="reset-button" onclick="resetpage()">
+      </div>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; Timer stellen</button>
+
+
+      <h1>Countdown Clock</h1>
+
+      <p>Aktuelle Uhrzeit</p>
+
+      <div id="clockdiv">
+        <div>
+          <span class="clk_hours" id="h_id"></span>
+          <div class="smalltext">Stunden</div>
+        </div>
+        <div>
+          <span class="clk_minutes"></span>
+          <div class="smalltext">Minuten</div>
+        </div>
+        <div>
+          <span class="clk_seconds"></span>
+          <div class="smalltext">Sekunden</div>
+        </div>
+      </div>
+
+      <p>Ende</p>
+
+      <div id="endzeitdiv">
+        <div>
+          <span class="endzeit_hours"></span>
+          <div class="smalltext">Stunden</div>
+        </div>
+        <div>
+          <span class="endzeit_minutes"></span>
+          <div class="smalltext">Minuten</div>
+        </div>
+      </div>
+
+      <p>Countdown</p>
+
+      <div id="countdowndiv">
+        <div class="cd_hour_hide">
+          <span class="cd_hours"></span>
+          <div class="smalltext">Stunden</div>
+        </div>
+        <div>
+          <span class="cd_minutes"></span>
+          <div class="smalltext">Minuten</div>
+        </div>
+      </div>
+
+      <br>
+
+      <progress id="progressbar" value="0" max="100"></progress>
+
+      <p id="demo"></p>
+    </div>
+  </body>
+</html>
