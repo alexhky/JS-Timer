@@ -1,2 +1,2 @@
 # JS-Timer
- mediocre timer web application written in JS
+timer web application written in JS
